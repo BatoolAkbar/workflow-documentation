@@ -1,6 +1,5 @@
 import React from 'react';
 import { useD3 } from './hooks/useD3';
-// import * as d3 from "https://cdn.skypack.dev/d3@7";
 import * as d3 from "d3";
 import './style.css';
 
@@ -57,8 +56,8 @@ function Tree(props) {
                     .attr("cursor", "pointer")
                     .attr("pointer-events", "all");
 
-                function update(source) {
-                    const duration = d3.event && d3.event.altKey ? 2500 : 250;
+                function update(source, event) {
+                    const duration = event && event.altKey ? 2500 : 250;
                     const nodes = root.descendants().reverse();
                     const links = root.links();
 
@@ -190,7 +189,6 @@ function Tree(props) {
     )
     return (
         <div>
-            
             <svg id="tree"></svg>
         </div>
 

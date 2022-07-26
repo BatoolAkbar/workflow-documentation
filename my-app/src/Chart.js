@@ -66,7 +66,7 @@ function Chart(props) {
 
                 const svg = d3.select("#viz")
                     .attr("viewBox", [-width / 3.5, -height / 2, width /2, height]);
-                svg.selectAll("*").remove()
+                    svg.selectAll("*").remove()
 
                 const link = svg.append("g")
                     .attr("stroke", "black")
@@ -132,18 +132,10 @@ function Chart(props) {
                     }
                 }
 
-                function tooltip(d) {
-                    console.log(d)
-                    if (d.data.report_name) {
-                        return "qq" + d.data.name
-                    }
-                    else {
-                        return d.data.name
-                    }
-                }
 
                 function tooltip(d) {
                     console.log(d)
+
                     if (d.data.report_name) {
                         return d.data.name  + "<br>" + "Lookback: " + d.data.lookback + " days"
                     }
@@ -153,51 +145,9 @@ function Chart(props) {
                 }
 
 
-                const dots = svg.append("g")
-                    .selectAll("circle")
-                    .data(nodes)
-                    .join("circle")
-                    .attr("stroke", "black")
-                    .attr("fill", d => colorScale(d))
-                    .attr("r", d => circleSize(d))
-                    .call(drag(simulation));
-
-                const label = svg.selectAll("text")
-                    .data(nodes)
-                    .join("text")
-                    .attr("class", "labels")
-                    .attr("opacity", "0")
-                    .text(d => nodesLabels(d))
-
-                dots.on("mouseover", function (d) {
-                    div.transition()
-                        .duration(200)
-                        .style("opacity", 0.8)
-                    d3.select(this)
-                        .style("stroke-width", "3px")
-                    div.html(tooltip(d))
-                        .style("left", (d3.event.pageX + 5) + "px")
-                        .style("top", (d3.event.pageY - 40) + "px");
-                })
-
-                    .on("mouseout", function (d) {
-                        div.transition()
-                            .duration(200)
-                            .style("opacity", 0);
-                        d3.select(this)
-                            .style("stroke-width", "1px")
-                            .style("opacity", 1)
-                    });
-
-                dots.on("click", d => generateNodePath(d))
-
-                const nodePath = d3.select(".toolbar").append("div")
-                    .attr("class", "node-container")
-                    .style("opacity", 0);
-
-
 
                 function nodePathText(d) {
+                    console.log(d)
                     if (d.data.source) {
                         return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name} </div>`
                     }
@@ -218,6 +168,54 @@ function Chart(props) {
                     }
                 }
 
+
+                const dots = svg.append("g")
+                    .selectAll("circle")
+                    .data(nodes)
+                    .join("circle")
+                    .attr("stroke", "black")
+                    .attr("fill", d => colorScale(d))
+                    .attr("r", d => circleSize(d))
+                    .call(drag(simulation))
+                    .on("click", (event, d) => { 
+                        generateNodePath(d);
+                    });
+
+                const label = svg.selectAll("text")
+                    .data(nodes)
+                    .join("text")
+                    .attr("class", "labels")
+                    .attr("opacity", "0")
+                    .text(d => nodesLabels(d))
+
+                dots.on("mouseover", function (event, d) {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", 0.8)
+                    d3.select(this)
+                        .style("stroke-width", "3px")
+                    div.html(tooltip(d))
+                        .style("left", (event.pageX + 5) + "px")
+                        .style("top", (event.pageY - 40) + "px");
+                })
+
+                    .on("mouseout", function () {
+                        div.transition()
+                            .duration(200)
+                            .style("opacity", 0);
+                        d3.select(this)
+                            .style("stroke-width", "1px")
+                            .style("opacity", 1)
+                    });
+
+
+                const nodePath = d3.select(".toolbar").append("div")
+                    .attr("class", "node-container")
+                    .style("opacity", 0);
+
+
+
+
                 function generateNodePath(d) {
                     nodePath
                         .style("opacity", 1)
@@ -230,10 +228,10 @@ function Chart(props) {
                     .scaleExtent([1, 8])
                     .on("zoom", zoomed));
 
-                function zoomed() {
-                    link.attr("transform", d3.event.transform);
-                    label.attr("transform", d3.event.transform);
-                    dots.attr("transform", d3.event.transform);
+                function zoomed(event) {
+                    link.attr("transform", event.transform);
+                    label.attr("transform", event.transform);
+                    dots.attr("transform", event.transform);
                 }
 
                 simulation.on("tick", () => {
