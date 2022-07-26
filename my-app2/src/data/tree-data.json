@@ -1,0 +1,4382 @@
+{
+  "name": "Data",
+  "children": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_StandardReport]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactStandardReport]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Standard",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Floodlight]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactFloodlight]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Activity ",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_CookieRNF_Month]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactCookieRNF_Month]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Monthly Reach",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_CookieRNF_Month]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactCookieRNF_Month]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Weekly Reach",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_StandardReport_DMA]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactDMAReport]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "DMA",
+                  "count": 2
+                }
+              ],
+              "name": "DCM_UAT",
+              "count": 10
+            }
+          ],
+          "name": "Campaign Manager",
+          "count": 10
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[vw_StandardReport]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactStandardReport] ",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Standard",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[vw_DisplayReport_with_Conversion_Activities]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactActivityReport]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Activity",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactMonthlyReachFrequency]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Monthly Reach",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactWeeklyReachFrequency]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Weekly Reach",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[vw_SearchReport]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactSearchReport]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Search Standard",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[vw_SearchReport_by_Activity]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactSearchReport_by_Conversion_Activities] ",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Search Activity",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_StandardReport_DMA]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[sizmek].[FactActivityReport_DCO]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "DCO Standard",
+                  "count": 2
+                }
+              ],
+              "name": "APIReportingDB_AMZN",
+              "count": 12
+            }
+          ],
+          "name": "Sizmek",
+          "count": 12
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[flashtalking].[creative_report_facts]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "name": null,
+                                  "count": 0
+                                }
+                              ],
+                              "name": "[flashtalking].[creative_dim]",
+                              "count": 1
+                            }
+                          ],
+                          "name": "[flashtalking].[creativeversion_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[flashtalking].[placement_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "source": "Ad Server / Creative / Planned Spend Sources",
+                                      "source_name": "Flashtalking",
+                                      "db_name": "APIReportingDB",
+                                      "report_name": "Ad Details",
+                                      "lookback": 0,
+                                      "main_view": "[dbo].[vw_Flashtalking_Ad_Details_Master]",
+                                      "table_1": "[flashtalking].[version_report_facts]",
+                                      "table_2": "[flashtalking].[campaign_dim]",
+                                      "table_3": "[flashtalking].[advertiser_dim]"
+                                    }
+                                  ],
+                                  "name": "[flashtalking].[advertiser_dim]",
+                                  "count": 1
+                                }
+                              ],
+                              "name": "[flashtalking].[campaign_dim]",
+                              "count": 1
+                            }
+                          ],
+                          "name": "[flashtalking].[version_report_facts]",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[dbo].[vw_Flashtalking_Ad_Details_Master]",
+                      "count": 4
+                    }
+                  ],
+                  "name": "Ad Details",
+                  "count": 4
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[flashtalking].[creative_report_facts]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [],
+                                  "name": null,
+                                  "count": 0
+                                }
+                              ],
+                              "name": "[flashtalking].[creative_dim]",
+                              "count": 1
+                            }
+                          ],
+                          "name": "[flashtalking].[creativeversion_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[flashtalking].[placement_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [
+                                {
+                                  "children": [
+                                    {
+                                      "source": "Ad Server / Creative / Planned Spend Sources",
+                                      "source_name": "Flashtalking",
+                                      "db_name": "APIReportingDB",
+                                      "report_name": "Standard",
+                                      "lookback": 0,
+                                      "main_view": "[dbo].[vw_Flashtalking_Standard_Report_v2_EL]",
+                                      "table_1": "[flashtalking].[version_report_facts]",
+                                      "table_2": "[flashtalking].[campaign_dim]",
+                                      "table_3": "[flashtalking].[advertiser_dim]"
+                                    }
+                                  ],
+                                  "name": "[flashtalking].[advertiser_dim]",
+                                  "count": 1
+                                }
+                              ],
+                              "name": "[flashtalking].[campaign_dim]",
+                              "count": 1
+                            }
+                          ],
+                          "name": "[flashtalking].[version_report_facts]",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[dbo].[vw_Flashtalking_Standard_Report_v2_EL]",
+                      "count": 4
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[lkupClient_Normalized]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Standard",
+                  "count": 5
+                }
+              ],
+              "name": "APIReportingDB",
+              "count": 9
+            }
+          ],
+          "name": "Flashtalking",
+          "count": 9
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Prisma_Details]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[placements]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaigns]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[placements_monthly]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Prisma Data",
+                  "count": 4
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[advanced_placement_details]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Advanced Placement Details",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[placements_daily_delivery]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Placements Daily",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[buy_orders]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Buy Orders",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[io_monthly]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "IO Monthly",
+                  "count": 1
+                }
+              ],
+              "name": "PrismaDB",
+              "count": 8
+            }
+          ],
+          "name": "Prisma",
+          "count": 8
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Innovid_Data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Bravecto_stage]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Report name",
+                  "count": 2
+                }
+              ],
+              "name": "InnovidDB",
+              "count": 2
+            }
+          ],
+          "name": "Innovid",
+          "count": 2
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DCO_Standard_Report_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[dim_Dynamic_Profile]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[dim_normalized_client]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[dim_Reporting_Label]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimAd]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimAdvertiser]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimCreative]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimPackage]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimPlacement]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimSite]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimTime]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[_fact_Dynamic_Creative_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[lkupClient_Normalized]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[prisma_daily_spend]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[Standard_Report_PlacementDate]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Standard",
+                  "count": 16
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DCO_Floodlight_Report_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[dim_Reporting_Label]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimAd]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimAdvertiser]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "DCM_UAT].[dbo].[DimCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimCreative]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimPackage]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimPlacement]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[DimSite]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[fact_Creative_Activity_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[DCM_UAT].[dbo].[Standard_Report_PlacementDate]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Floodlight",
+                  "count": 11
+                }
+              ],
+              "name": "DCO_DB",
+              "count": 27
+            }
+          ],
+          "name": "Dynamic Creative (DCO)",
+          "count": 27
+        }
+      ],
+      "name": "Ad Server / Creative / Planned Spend Sources",
+      "count": 68
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_IAS_Integration_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[LEGO_IAS_Details]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Report name",
+                  "count": 2
+                }
+              ],
+              "name": "IASData",
+              "count": 2
+            }
+          ],
+          "name": "Integral Ad Science (IAS)",
+          "count": 2
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DV_Custom_Report_data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Applebees_DV_Custom_Report_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Custom",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DV_Detailed_Viewability_Report_data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Applebees_DV_Detailed_Viewability_Report_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Viewability",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DV_Monitoring_Report_data] ",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Applebees_DV_Monitoring_Report_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Monitoring",
+                  "count": 2
+                }
+              ],
+              "name": "IASData",
+              "count": 6
+            }
+          ],
+          "name": "Double Verify (DV)",
+          "count": 6
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[KDP_MOAT_staging] ",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Report name",
+                  "count": 1
+                }
+              ],
+              "name": "IASData",
+              "count": 1
+            }
+          ],
+          "name": "Moat",
+          "count": 1
+        }
+      ],
+      "name": "Ad Verification Sources",
+      "count": 9
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Matterkind_Data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactDV360]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Matterkind_AU_Spend]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_DIM_ADSERVER_CAMPAIGN]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_DIM_ADVERTISER]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_DIM_CAMPAIGN]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_DIM_PLACEMENT]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_DIM_SITE]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[MATTERKIND_FACT_COST]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Matterkind Spend – Datorama Feed",
+                  "count": 9
+                }
+              ],
+              "name": "CadreonDB",
+              "count": 9
+            }
+          ],
+          "name": "Matterkind Spend",
+          "count": 9
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Matterkind_Data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DimAdvertiserDV360]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DimCampaignDV360] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DimInsertionOrderDV360] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DimLineItemDV360] ",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[dbo].[FactDV360]",
+                      "count": 4
+                    }
+                  ],
+                  "name": "Standard",
+                  "count": 5
+                }
+              ],
+              "name": "CadreonDB",
+              "count": 5
+            }
+          ],
+          "name": "DV 360",
+          "count": 5
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_TradeDesk_Performance_basic_stats]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimTradeDesk_AdGroup]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimTradeDesk_AdServer]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimTradeDesk_Campaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimTradeDesk_Creative]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimTradeDesk_Partner]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FactTradeDesk_BasicStats_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Performance",
+                  "count": 7
+                }
+              ],
+              "name": "CadreonDB",
+              "count": 7
+            }
+          ],
+          "name": "Trade Desk",
+          "count": 7
+        }
+      ],
+      "name": "Programmatic Sources",
+      "count": 21
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_FB_Daily_Ads]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FB_DailyAd_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimFBCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimFBAdset]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FB_DailyAd_Report_Conversion]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[fact_fb_daily_ad_report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "FB Daily Ads",
+                  "count": 6
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_FB_Monthly_Campaign_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FB_MonthlyCampaign_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimFBCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[fact_fb_monthly_campaign_report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Monthly Campaign",
+                  "count": 4
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_FB_DailyDMA_Report]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[FB_DailyDMA_Report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Daily DMA",
+                  "count": 2
+                }
+              ],
+              "name": "FB_DB_Proc",
+              "count": 12
+            }
+          ],
+          "name": "Facebook",
+          "count": 12
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Twitter_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[media_creatives_data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[media_creatives_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[promoted_tweets_data]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[promoted_tweets_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaign_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 7
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DIM_DMA]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Dim_Country]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Dim_DMA]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[lookup_dma_report_by_account]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "DMA",
+                  "count": 4
+                }
+              ],
+              "name": "TwitterDB",
+              "count": 11
+            }
+          ],
+          "name": "Twitter",
+          "count": 11
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Snapchat_Daily_Details_All]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_ad]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_ad_squad]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_campaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_ad_account]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ad",
+                  "count": 5
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_campaign]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_conversion]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Conversion",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_geo]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Geo",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[snap_stats]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Stat",
+                  "count": 1
+                }
+              ],
+              "name": "SnapchatDB",
+              "count": 9
+            }
+          ],
+          "name": "Snapchat",
+          "count": 9
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Pinterest_Ad_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[ad_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[ad_facts] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[ad_group_dim] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[advertiser_dim] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[campaign_dim] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[keyword_dim] ",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[pinterest].[keyword_facts] ",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[pinterest].[tbl_Pinterest_Ad_Details]",
+                      "count": 7
+                    }
+                  ],
+                  "name": "Ad",
+                  "count": 8
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Pinterest_Keyword_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[ad_group_facts]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[ad_group_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[advertiser_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[keyword_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[keyword_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Keyword",
+                  "count": 8
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[account_server_staging]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Accounts",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[pinterest].[campaign_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 2
+                }
+              ],
+              "name": "APIReportingDB",
+              "count": 19
+            }
+          ],
+          "name": "Pinterest",
+          "count": 19
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_LinkedIn_Ad_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[linkedin].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[linkedin].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[linkedin].[ad_facts]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[linkedin].[campaign_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ads",
+                  "count": 5
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[linkedin].[budget_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Budgets",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 6
+            }
+          ],
+          "name": "LinkedIn",
+          "count": 6
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Tiktok_Fact_Basic_StandardReport]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[DimAccount]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[DimAd]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[DimAdGroup]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[DimCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[Fact_Basic_StandardReport]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Standard Report",
+                  "count": 6
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[tiktok].[DimInterests_Category] ",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Interests",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 7
+            }
+          ],
+          "name": "TikTok",
+          "count": 7
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Reddit_Report_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[reddit].[account_client]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[reddit].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[reddit].[adgroup_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[reddit].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[reddit].[client_reports_fact]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ad",
+                  "count": 6
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 6
+            }
+          ],
+          "name": "Reddit",
+          "count": 6
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[indeed].[fact_ad_id_report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ad ID Report",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[indeed].[fact_organic_metrics_report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Organic Metrics",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[indeed].[fact_organic_apply_starts_report]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Organic Metrics Apply Starts",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 3
+            }
+          ],
+          "name": "Indeed",
+          "count": 3
+        }
+      ],
+      "name": "Social Sources",
+      "count": 73
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DS_Keyword_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[AdWords_Keyword_Non_DS_Clients]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimDSAdgroup]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimDS360Advertiser]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimDSCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Keyword_Details]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Normalized_Client_Lookup]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DS_Keyword_Details_Weekly_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Keyword_Details_Weekly]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Keyword",
+                  "count": 9
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DS_CampaignSearch_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DimDSCampaign]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_CampaignSearch_Details]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Normalized_Client_Lookup]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign Monthly Impression",
+                  "count": 4
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_DS_Campaign_DMA_Search]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Campaign_DMA_Search]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Normalized_Client_Lookup]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "DMA Search",
+                  "count": 3
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Floodlight_Search_Details_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[DS_Normalized_Client_Lookup]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Floodlight_Search_Details]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Floodlight",
+                  "count": 3
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DS_AdGroup_Details]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[DS_CampaignLabel_Details]",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[dbo].[vw_gilead_UTM_search_validation]",
+                      "count": 2
+                    }
+                  ],
+                  "name": "Gilead – UTM Compliance",
+                  "count": 2
+                }
+              ],
+              "name": "DS_Search",
+              "count": 21
+            }
+          ],
+          "name": "SA 360 ",
+          "count": 21
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_AdWords_Campaign_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaigns_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaigns_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 5
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_AdWords_Keyword_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[accounts_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[ad_groups_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[ads_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaigns_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[keywords_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[keywords_data_v2]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_AdWords_Keyword_Data_AppendToDS]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[ad_groups_ids_exclude]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[ad_groups_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Keywords",
+                  "count": 16
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_AdWords_Video_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[accounts_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[ad_groups_dim]",
+                          "count": 1
+                        },
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[dbo].[ads_dim]",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[dbo].[videos_data]",
+                      "count": 3
+                    }
+                  ],
+                  "name": "Video",
+                  "count": 5
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Merck_Search_Validation]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_details_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB]. [bing].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_groups_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[adgroup_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[labels_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Merck Search Compliance – Ad Details",
+                  "count": 12
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Merck_Search_Validation_Campaigns]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_details_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB]. [bing].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_groups_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[adgroup_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[campaign_langs_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_location_criterion_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[extensions_map]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[geo_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[geotarget_reference]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[keyword_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[merck_keywords_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Merck Search Compliance – Campaign",
+                  "count": 19
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Merck_Search_Validation_Extensions_v2]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_details_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB]. [bing].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB]. [bing].[campaign_extensions_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[extensions_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[extensions_dim_v2]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[extensions_map]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[extensions_map_v2]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[keyword_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[labels_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[labels_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Merck Search Compliance – Extension",
+                  "count": 16
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Merck_Search_Validation_Keywords_v2]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_details_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[campaign_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[merck_keywords_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[negative_keywords_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Merck Search Compliance – Keyword",
+                  "count": 7
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Merck_Search_Validation_KeywordsNegative]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[ad_details_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[campaigns_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[merck_keywords_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[merck_negative_keywords_sheet]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[AdWordsDB].[dbo].[negative_keywords_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[ApiReportingDB].[bing].[negativekeyword_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Merck Search Compliance – Negative Keyword",
+                  "count": 9
+                }
+              ],
+              "name": "AdWordsDB",
+              "count": 89
+            }
+          ],
+          "name": "Google Ads ",
+          "count": 89
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Bing_Campaign_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[accounts_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[campaign_facts]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[campaign_dim]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 4
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Bing_Keyword_Data_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[accounts_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[ad_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[adgroup_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[campaign_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[keyword_dim]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_Bing_Keyword_Append_To_DS]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[keyword_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Bulk Keywords",
+                  "count": 13
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[ad_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[ad_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ads",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[adgroup_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[adgroup_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Ad Group",
+                  "count": 2
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[budget_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Budget",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[geo_dim]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[bing].[geo_facts]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Geotargeting and Language",
+                  "count": 2
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 24
+            }
+          ],
+          "name": "Bing",
+          "count": 24
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_ga_sessions]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Sessions",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_ga_goals]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Goals",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_dcm_ga]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign Manager Google Analytics",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_ds_ga]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "SA 360 Google Analytics",
+                  "count": 1
+                }
+              ],
+              "name": "GA_DB",
+              "count": 4
+            }
+          ],
+          "name": "Google Analytics",
+          "count": 4
+        }
+      ],
+      "name": "Search Sources",
+      "count": 138
+    },
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Networking_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Network TV",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 1
+            }
+          ],
+          "name": "Network",
+          "count": 1
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Print_data]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Print",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 1
+            }
+          ],
+          "name": "Print",
+          "count": 1
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[Spot_data] ",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Spot",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 1
+            }
+          ],
+          "name": "Spot",
+          "count": 1
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[nielsen].[DimAccount]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Account",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[nielsen].[DimCampaign]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Campaign",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[nielsen].[DimSitePlacement]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Placement",
+                  "count": 1
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[nielsen].[FactCampaignExposure]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Fact Campaign Exposure",
+                  "count": 1
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 4
+            }
+          ],
+          "name": "Nielsen",
+          "count": 4
+        },
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_FourSquare_Daily_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[foursquare].[dim_advertiser]",
+                      "count": 2
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[foursquare].[dim_reports] ",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[foursquare].[fact_reports]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [],
+                          "name": null,
+                          "count": 0
+                        }
+                      ],
+                      "name": "[dbo].[vw_FourSquare_Overall_Master]",
+                      "count": 1
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "children": [],
+                              "name": null,
+                              "count": 0
+                            }
+                          ],
+                          "name": "[foursquare].[dim_reports]",
+                          "count": 1
+                        }
+                      ],
+                      "name": "[foursquare].[fact_reports_overall]",
+                      "count": 1
+                    }
+                  ],
+                  "name": "Report name",
+                  "count": 6
+                }
+              ],
+              "name": "ApiReportingDB",
+              "count": 6
+            }
+          ],
+          "name": "Foursquare",
+          "count": 6
+        }
+      ],
+      "name": "TV / Placed / DAR Sources",
+      "count": 13
+    }
+  ]
+}

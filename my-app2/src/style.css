@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Raleway:wght@400;600;700&display=swap');
+
+
+body {
+  background-color: white;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  padding: 10px;
+  font: 12px sans-serif;
+  background: black;
+  color: white;
+  border: 0px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+
+.title {
+  font-size: 32px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: black;
+  margin-top: 50px;
+  width: max-content;
+  padding-bottom: 50px;
+  margin-left: 10%;
+
+}
+
+
+#tree{
+  margin-left: 5%;
+  border: 0.5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  width: 58vw;
+  height: 80vh;
+} 
+#viz{
+  border: 0.5px solid black;
+  border-radius: 0px 10px 10px 0px;
+  width: 58vw;
+  height: 80vh;
+}
+.tree{
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+}
+
+.labels {
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+  fill: black;
+}
+
+.frame-container {
+  margin:auto;
+  display:flex;
+  width: 80vw;
+}
+
+.switch-btn{
+  margin-left: 10px;
+  margin-top: 50px;
+  font-family: 'Raleway', sans-serif;
+  position: absolute;
+  font-size: 12px;
+  border: none;
+  border-radius: 8px;
+  /* border: 0.5px solid white; */
+  background-color: rgb(255, 255, 255, 0.08);
+  color: white;
+  width: 40px;
+  height: 40px;
+  /* padding-top: 2px;
+  padding-left: 2px; */
+  cursor: pointer;
+}
+
+.switch-btn path{
+  position: absolute;
+  fill:white;
+}
+.switch-btn:hover{
+  border: 0.5px solid white;
+
+}
+
+
+.filter-container{
+  margin-top: 50px;
+  border-bottom: 0.5px solid rgb(77, 77, 77);
+  padding-bottom: 25px;
+}
+
+.dropdown-container select {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  width: 80%;
+  padding: 5px;
+  border: none;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 12px;
+  display:flex;
+
+}
+
+.dropdown-container{
+  color: white
+}
+
+select:focus {
+  outline: none;
+}
+
+.search{
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.export{
+  color: white;
+  display: flex;
+  margin-top: 20px;
+  
+}
+
+#search{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  width: 80%;
+  padding: 5px 5px 5px 15px;
+  border: none;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 12px;
+}
+
+#search:focus{
+  outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { 
+  display: none; 
+}
+
+#legend {
+  font-family: 'Raleway', sans-serif;
+  font-size: 10px;
+  display: flex;
+  background-color: transparent;
+  color: white;
+  flex-wrap: wrap;
+  line-height: 20px;
+  width: 90%;
+  position: absolute;
+  bottom: 5%;
+  border-top: 0.5px solid rgb(77, 77, 77);
+  padding-top: 15px;
+}
+
+
+
+.legend-keys {
+  border: 0.5px solid black;
+  border-radius: 15px;
+  height: 10px;
+  width: 10px;
+  margin-right: 3px;
+  margin-top: 5px;
+}
+
+.key-container {
+  margin-left: 10px;
+  display: flex;
+  width: max-content;
+
+}
+
+.toolbar {
+  background-color: rgb(21, 21, 21);
+  flex-direction: column;
+  font-size: 12px;
+  font-family: 'Raleway', sans-serif;
+  padding: 100px 10px 10px 25px;
+  border-radius: 50px 10px 10px 50px;
+  align-items: baseline;
+  height: 83%;
+  margin-top: -1%;
+  margin-left: -1%;
+  width: 22%;
+  position: absolute;
+
+}
+
+.checkbox{
+  margin-top: 20px;
+  color: white;
+  display: flex;
+}
+.checkbox span{
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+.checkbox input{
+  border: 0.5px solid white;
+  /* appearance: none; */
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.dropdown button{
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  border: 0.5px solid white;
+  border-radius: 0px;
+  color: white;
+  padding: 0;
+
+}
+
+.node-container{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border-bottom: 0.5px solid rgb(77, 77, 77);
+  /* margin-top: 1%; */
+  padding-bottom: 25px;
+}
+
+.node-path-title{
+  color: white;
+  padding-bottom: 8px;
+
+}
+
+.node-text{
+  width: fit-content;
+  display: flex;
+  /* border: 0.5px solid white; */
+  padding: 8px 10px 8px 10px;
+  background-color: rgb(255, 255, 255, 0.08);
+  color: white;
+  border-radius: 20px;
+  font-size: 10px;
+  margin-top: 5px;
+}
+.node-key{
+  margin-right: 5px;
+  margin-top: 2px;
+  /* border: 0.5px solid black; */
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+}
+
+.node-key-source{
+  background-color: #ff08e6;
+}
+.node-key-source-name{
+  background-color: #00ffff;
+}
+.node-key-db{
+  background-color: #d9ff00;
+}
+.node-key-report{
+  background-color: #8f5cff;
+}
+.node-key-mv{
+  background-color:#eda6ff;
+}
+.node-key-table{
+  background-color:white;
+}
