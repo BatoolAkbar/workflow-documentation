@@ -155,6 +155,24 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none; 
 }
 
+.save-btn{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  width: 80px;
+  padding: 5px 0px 5px 0px;
+  border: none;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 12px;
+}
+
+.save-btn:hover{
+  background-color: rgb(255, 255, 255, 0.08);
+
+}
+
 #legend {
   font-family: 'Raleway', sans-serif;
   font-size: 10px;

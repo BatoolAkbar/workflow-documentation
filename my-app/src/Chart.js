@@ -25,14 +25,6 @@ function Chart(props) {
                 const links = root.links();
                 const nodes = root.descendants();
 
-
-                var colors = ["#ff08e6", "#00ffff", "#d9ff00", "#6924ff", "#f157ff", "white", "white"]
-                var cols = ["Source", "Source Name", "Database Name", "Report Name", "Lookback", "Main View", "Tables"]
-
-                var legend_colorScale = d3.scaleOrdinal()
-                    .domain(cols)
-                    .range(colors)
-
                 function drag(simulation) {
                     function dragstarted(event, d) {
                         if (!event.active) simulation.alphaTarget(0.5).restart();
@@ -98,9 +90,6 @@ function Chart(props) {
                 }
 
                 function circleSize(d) {
-                    if (d.data.name == 'API') {
-                        return 35
-                    }
                     if (d.data.source) {
                         return 20
                     } if (d.data.source_name) {
@@ -130,12 +119,14 @@ function Chart(props) {
                     if (d.data.report_name) {
                         return d.data.report_name
                     }
+                    if (d.data.db_name) {
+                        return d.data.db_name
+                    }
+                    
                 }
 
 
                 function tooltip(d) {
-                    console.log(d)
-
                     if (d.data.report_name) {
                         return d.data.name  + "<br>" + "Lookback: " + d.data.lookback + " days"
                     }
@@ -147,7 +138,6 @@ function Chart(props) {
 
 
                 function nodePathText(d) {
-                    console.log(d)
                     if (d.data.source) {
                         return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name} </div>`
                     }

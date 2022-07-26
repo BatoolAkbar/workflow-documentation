@@ -4,7 +4,10 @@ import * as d3 from "d3";
 import './style.css';
 
 
+
 function Tree(props) {
+
+    
     // code from Mike Bostock example of Collapsible Tree: https://observablehq.com/@d3/collapsible-tree
     const ref = useD3(
         () => {
@@ -167,7 +170,7 @@ function Tree(props) {
 
                     svg.call(d3.zoom()
                         .extent([[0, 0], [width, height]])
-                        .scaleExtent([-5, 10])
+                        .scaleExtent([0, 10])
                         .on("zoom", zoomed));
 
                     function zoomed(event, d) {
@@ -175,18 +178,13 @@ function Tree(props) {
                         gLink.attr("transform", event.transform);
 
                     }
-
-                  
-
                 }
 
                 update(root);
-
             }
-
         }, []
-
     )
+
     return (
         <div>
             <svg id="tree"></svg>
