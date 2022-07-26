@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Button, Col, Row } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Col, Row } from 'react-bootstrap';
 import Chart from './Chart'
 import Tree from './Tree'
 import Toolbar from './Toolbar'

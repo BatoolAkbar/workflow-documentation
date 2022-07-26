@@ -1,6 +1,5 @@
 import React from 'react';
 import { useD3 } from './hooks/useD3';
-import { Col, Row } from 'react-bootstrap';
 import * as d3 from "d3";
 import './style.css';
 

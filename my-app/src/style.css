@@ -36,6 +36,7 @@ div.tooltip {
   border-radius: 0px 10px 10px 0px;
   width: 58vw;
   height: 80vh;
+  font-size: 110px;
 } 
 #viz{
   border: 0.5px solid black;
