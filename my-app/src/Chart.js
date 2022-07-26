@@ -10,12 +10,6 @@ function Chart(props) {
             const height = window.innerHeight;
             const data = props.data
 
-            // var src_clr = "#a1fff9"
-            // var src_name_clr = "#cbff9a"
-            // var db_clr = "#ffd573"
-            // var report_clr = "#b2afff"
-            // var view_clr = "#ffb0f1"
-            // var table_clr = "white"
             var src_clr = "#ff08e6"
             var src_name_clr = "#00ffff"
             var db_clr = "#d9ff00"
