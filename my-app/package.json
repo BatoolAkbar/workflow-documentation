@@ -15,7 +15,11 @@
     "react-dom": "^18.2.0",
     "react-html2pdf": "^1.0.1",
     "react-scripts": "5.0.1",
+    "react-select": "^5.4.0",
+    "react-select-2": "^2.0.11",
     "save-svg-as-png": "^1.4.17",
+    "select2": "^4.0.13",
+    "select2-react-component": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

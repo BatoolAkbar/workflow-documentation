@@ -11,17 +11,18 @@ function Toolbar(props) {
     scale: 1,
     encoderOptions: 0.8,
     backgroundColor: 'white',
-    encoderType: 'JPEG',
     width: window.innerWidth,
-    height: window.innerHeight,    
-    top: -window.innerHeight/2,
-    left: -window.innerWidth/6,
+    height: window.innerHeight,
+    top: -window.innerHeight / 2,
+    left: -window.innerWidth / 6,
   }
 
-  
+
   const handleClick = () => {
-    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), 'shapes.png', imageOptions);
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), 'api-tree.png', imageOptions);
   };
+
+  const myData = props.data
 
 
   if (props.view == "layout") {
@@ -60,15 +61,18 @@ function Toolbar(props) {
         <div className="toolbar">
           <div className="filter-container">
             <div className="search">
-            {/* <Search /> */}
-
-              {/* <span>Search</span>
-              <input type="search" id="search"></input> */}
+              <input type="text" id="search" placeholder="Search for tables.." />
+              <div id="test">
+                {/* {console.log(props.data[0].name)} */}
+                {props.data.map(d => (
+                  <li key={d.children[0].name} id="span">
+                    <a>{d.children[0].name}</a>
+                  </li>
+                ))}
+              </div>
             </div>
-
-
             <button className="save-btn" onClick={handleClick}>
-              SAVE
+              DOWNLOAD
             </button>
           </div>
           <Legend />
