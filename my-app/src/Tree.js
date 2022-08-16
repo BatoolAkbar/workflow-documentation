@@ -6,6 +6,8 @@ import './style.css';
 
 
 function Tree(props) {
+
+
     // code from Mike Bostock example of Collapsible Tree: https://observablehq.com/@d3/collapsible-tree
     const ref = useD3(
         () => {
@@ -272,21 +274,21 @@ function Tree(props) {
                             var nested_children = root.data.children
                             results = nested_children.filter(obj => obj.name.toUpperCase().includes(inputValue))
                             console.log(results, "RESULTS")
-                            // searched.children = searched.children ? null : searched._children;
-                            // update(searched[0].data)
+                            // results.children = results.children ? null : results._children;
+                            update(results)
 
                         }
 
 
 
-                        var paths = searchTree(root.data, searched_value, []);
-                        // console.log(paths)
-                        if (typeof (paths[0]) !== "undefined") {
-                            openPaths(paths[0].children);
-                        }
-                        else {
-                            console.log(searched_value + " not found!");
-                        }
+                        // var paths = searchTree(root.data, results, []);
+                        // // console.log(paths)
+                        // if (typeof (paths[0]) !== "undefined") {
+                        //     openPaths(paths[0].children);
+                        // }
+                        // else {
+                        //     console.log(results + " not found!");
+                        // }
                     }
                 }
 

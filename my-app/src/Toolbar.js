@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Toolbar(props) {
   const saveSvgAsPng = require('save-svg-as-png')
+  // const search_data = require('./data/search_data.json');
+
   const imageOptions = {
     scale: 1,
     encoderOptions: 0.8,
@@ -63,12 +65,13 @@ function Toolbar(props) {
             <div className="search">
               <input type="text" id="search" placeholder="Search for tables.." />
               <div id="test">
-                {/* {console.log(props.data[0].name)} */}
+                {/* {console.log(search_data)} */}
                 {props.data.map(d => (
-                  <li key={d.children[0].name} id="span">
-                    <a>{d.children[0].name}</a>
+                  <li key={d.name} id="span">
+                    <a>{d.name}</a>
                   </li>
                 ))}
+                
               </div>
             </div>
             <button className="save-btn" onClick={handleClick}>
