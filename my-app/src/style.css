@@ -36,6 +36,7 @@ div.tooltip {
   border-radius: 0px 10px 10px 0px;
   width: 58vw;
   height: 80vh;
+  font-size: 110px;
 } 
 #viz{
   border: 0.5px solid black;
@@ -109,6 +110,16 @@ div.tooltip {
 
 }
 
+.found {
+  stroke: #ff4136;
+}
+
+.link {
+  fill: none;
+  stroke: rgb(7, 235, 19);
+  stroke-width: 2px;
+}
+
 .dropdown-container{
   color: white
 }
@@ -152,6 +163,24 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration { 
   display: none; 
+}
+
+.save-btn{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  width: 30%;
+  padding: 5px 0px 5px 0px;
+  border: none;
+  color: white;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  margin-top: 12px;
+}
+
+.save-btn:hover{
+  background-color: rgb(255, 255, 255, 0.08);
+
 }
 
 #legend {
@@ -237,7 +266,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
   flex-direction: column;
   border-bottom: 0.5px solid rgb(77, 77, 77);
-  /* margin-top: 1%; */
+  margin-top: 5%;
   padding-bottom: 25px;
 }
 

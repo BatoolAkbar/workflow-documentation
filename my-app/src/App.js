@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Col, Row } from 'react-bootstrap';
+import React from 'react';
 import Header from './Header'
 import Frame from './Frame'
 import './style.css';
 
 function App() {
-
- 
   return (
     <div className="container-fluid">
-          <Header />
-          <Frame />
+      <Header />
+      <Frame />
     </div>
   );
 }
