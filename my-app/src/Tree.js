@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useD3 } from './hooks/useD3';
 import * as d3 from "d3";
 import './style.css';
@@ -6,6 +6,15 @@ import './style.css';
 
 
 function Tree(props) {
+    const search_data = require('./data/search_data.json');
+    const [paths, setPaths] = useState()
+
+
+    search_data.forEach((d, i) => {
+        d.id = i;
+        d._children = d.children;
+        if (d.depth && d.data.length !== 7) d.children = null;
+    });
 
 
     // code from Mike Bostock example of Collapsible Tree: https://observablehq.com/@d3/collapsible-tree
@@ -46,14 +55,16 @@ function Tree(props) {
                 // descendants() is a d3 built in function used to generate and return an array of descendant nodes
                 root.descendants().forEach((d, i) => {
                     d.id = i;
+                    d.data.id = i;
+                    d.data.depth = i;
                     d._children = d.children;
                     if (d.depth && d.data.length !== 7) d.children = null;
                 });
 
                 // code from https://bl.ocks.org/jjzieve/a743242f46321491a950
                 // function returns the path to the searched node (object)
-                function searchTree(obj, search, path) {
-                    if (obj.name === search) { //if search is found return, add the object to the path and return it
+                function searchTree(obj, searched, path) {
+                    if (obj.name === searched) { //if search is found return, add the object to the path and return it
                         path.push(obj);
                         return path;
                     }
@@ -61,7 +72,7 @@ function Tree(props) {
                         var children = (obj.children) ? obj.children : obj._children;
                         for (var i = 0; i < children.length; i++) {
                             path.push(obj);// we assume this path is the right one
-                            var found = searchTree(children[i], search, path);
+                            var found = searchTree(children[i], searched, path);
                             if (found) {// we were right, this should return the bubbled-up path from the first if statement
                                 return found;
                             }
@@ -76,17 +87,17 @@ function Tree(props) {
                 }
 
                 // function opens/expands the path of the searched node (object)
-
                 function openPaths(paths) {
                     for (var i = 0; i < paths.length; i++) {
-                        if (paths[i].id !== "1") {//i.e. not root
-                            paths[i].class = 'found';
-                            if (paths[i]._children) { //if children are hidden: open them, otherwise: don't do anything
-                                paths[i].children = paths[i]._children;
-                                paths[i]._children = null;
-                            }
-                            update(paths[i]);
-                        }
+                        // if (paths[i].id !== "1") {//i.e. not root
+                        //     paths[i].class = 'found';
+                        //     if (paths[i]._children) { //if children are hidden: open them, otherwise: don't do anything
+                        //         paths[i].children = paths[i]._children;
+                        //         paths[i]._children = null;
+                        //     }
+                        //     update(paths[i]);
+                        // }
+                        update(paths[i]);
                     }
                 }
 
@@ -97,26 +108,27 @@ function Tree(props) {
                 // removing svg to avoid tree duplication
                 svg.selectAll("*").remove()
 
-
                 // defining a group to hold all the links (lines that connect the nodes)
-                const gLink = svg.append("g")
-                    .attr("fill", "none")
-                    .attr("stroke", "grey")
-                    .attr("stroke-opacity", 0.5)
-                    .attr("stroke-width", 0.5);
+                const gLink = svg.append("g");
+
+                // .attr("fill", "none")
+                // .attr("stroke", "grey")
+                // .attr("stroke-opacity", 0.5)
+                // .attr("stroke-width", 0.5);
 
                 // defining a group to hold all the nodes
                 const gNode = svg.append("g")
                     .attr("cursor", "pointer")
                     .attr("pointer-events", "all");
 
+                update(root);
+
                 // function updates nodes positions when an event happens (click or search)
-                function update(source, event) {
-                    const duration = event && event.altKey ? 2500 : 250;
+                function update(treePath) {
+                    var duration = 750;
                     const nodes = root.descendants().reverse();
                     // .links() is a d3 function that returns an array of links to the children of the node object, each link object has a source and a target field that hold references to child nodes.
                     const links = root.links();
-
 
                     // Compute the new tree layout.
                     tree(root);
@@ -129,26 +141,28 @@ function Tree(props) {
                     });
 
                     const height = right.x - left.x + margin.top + margin.bottom;
-
                     const transition = svg.transition()
                         .duration(duration)
                         .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
                         // tween calculates attributes during transitions for smoother animation
                         .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
-
                     // Update the nodes…
                     const node = gNode.selectAll("g")
                         .data(nodes, d => d.id);
-
                     // Enter any new nodes at the parent's previous position.
                     const nodeEnter = node.enter().append("g")
-                        .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                        .attr("transform", function (d) { return "translate(" + treePath.y0 + "," + treePath.x0 + ")"; })
                         .attr("fill-opacity", 0)
                         .attr("stroke-opacity", 0)
-                        .on("click", (event, d) => {
-                            console.log(d, "DDD")
-                            d.children = d.children ? null : d._children;
-                            update(d);
+                        // ((node) => {
+                        //     console.log("test")
+                        //     node.children = node.children ? null : node._children;
+                        //     update(node);
+                        // })();
+                        .on("click", (event, node) => {
+                            node.children = node.children ? null : node._children;
+                            update(node);
+
                         });
 
                     // nodes colors
@@ -168,7 +182,7 @@ function Tree(props) {
                         }
                     }
 
-                    // drawing nodes
+                    // drawing circles
                     nodeEnter.append("circle")
                         .attr("r", 8)
                         .attr("fill", d => colorScale(d))
@@ -185,7 +199,6 @@ function Tree(props) {
                         .clone(true).lower()
                         .attr("stroke-linejoin", "round")
 
-
                     // Transition nodes to their new position.
                     node.merge(nodeEnter).transition(transition)
                         .attr("transform", d => `translate(${d.y},${d.x})`)
@@ -194,22 +207,19 @@ function Tree(props) {
 
                     // Transition exiting nodes to the parent's new position.
                     node.exit().transition(transition).remove()
-                        .attr("transform", d => `translate(${source.y},${source.x})`)
+                        .attr("transform", d => `translate(${treePath.y},${treePath.x})`)
                         .attr("fill-opacity", 0)
                         .attr("stroke-opacity", 0);
-
-
 
                     // Update the links…
                     const link = gLink.selectAll("path")
                         .data(links, d => d.target.id);
 
-
-
                     // Enter any new links at the parent's previous position.
                     const linkEnter = link.enter().append("path")
+                        .attr("class", "link")
                         .attr("d", d => {
-                            const o = { x: source.x0, y: source.y0 };
+                            const o = { x: treePath.x0, y: treePath.y0 };
                             return diagonal({ source: o, target: o });
                         });
 
@@ -220,12 +230,12 @@ function Tree(props) {
                     // Transition exiting nodes to the parent's new position.
                     link.exit().transition(transition).remove()
                         .attr("d", d => {
-                            const o = { x: source.x, y: source.y };
+                            const o = { x: treePath.x, y: treePath.y };
                             return diagonal({ source: o, target: o });
                         });
 
                     // Stash the old positions for transition.
-                    root.eachBefore(d => {
+                    root.children.forEach(d => {
                         d.x0 = d.x;
                         d.y0 = d.y;
                     });
@@ -240,76 +250,44 @@ function Tree(props) {
                         gNode.attr("transform", event.transform);
                         gLink.attr("transform", event.transform);
                     }
-
                 }
-
                 // search function
-                function search() {
-                    // Actual tags are in Toolbar.js
-                    var input, inputValue, ul, li, a, i, searched_value;
+                function search(e) {
+                    var input, inputValue, searched_value;
                     input = document.getElementById('search');
                     inputValue = input.value.toUpperCase();
-                    ul = document.getElementById("test");
-                    li = ul.getElementsByTagName('li');
-
                     var results = [];
+                    var data_arr = []
 
-                    // Loop through all list items
-                    for (i = 0; i < li.length; i++) {
-                        a = li[i].getElementsByTagName("a")[0];
-                        searched_value = a.textContent || a.innerText;
-                        console.log(inputValue, "SEARCHED VALUE")
+                    function removeDuplicates(arr) {
+                        return [...new Set(arr)];
+                    }
 
-
-                        console.log(root, "ROOT")
-
-                        const root2 = root.data.children.map((element) => {
-                            return { ...element, children: element.children.filter((subElement) => subElement.name == inputValue) }
-                        })
-
-                        console.log(root2)
-
-                        // filter children
-                        if (searched_value.toUpperCase().indexOf(inputValue) > -1) {
-                            var nested_children = root.data.children
-                            results = nested_children.filter(obj => obj.name.toUpperCase().includes(inputValue))
-                            console.log(results, "RESULTS")
-                            // results.children = results.children ? null : results._children;
-                            update(results)
-
-                        }
-
-
-
-                        // var paths = searchTree(root.data, results, []);
-                        // // console.log(paths)
-                        // if (typeof (paths[0]) !== "undefined") {
-                        //     openPaths(paths[0].children);
-                        // }
-                        // else {
-                        //     console.log(results + " not found!");
-                        // }
+                    search_data.map(d => data_arr.push(d.db_name, d.source, d.source_name, d.report_name, d.main_view, d.table_1, d.table_2))
+                    const dataArr = removeDuplicates(data_arr)
+                    for (let i = 0; i < dataArr.length; i++) {
+                        searched_value = e.target.value
+                        results = dataArr.filter(str => str.toUpperCase().includes(inputValue))
+                    }
+                    var paths = searchTree(root.data, results[0], []);
+                    if (typeof (paths) !== "undefined") {
+                        console.log(paths, "PATH")
+                        openPaths(paths);
+                    }
+                    else {
+                        console.log(results[0], " not found!");
                     }
                 }
+                d3.select("#submit")
+                    .on("click", search)
 
-                d3.select("#search")
-                    .on("keydown", search)
-
-                update(root);
             }
         }, []
-
-
     )
-
-
-
     return (
         <div>
             <svg id="tree"></svg>
         </div>
-
     );
 }
-
 export default Tree;

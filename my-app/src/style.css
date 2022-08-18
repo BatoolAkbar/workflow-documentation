@@ -88,10 +88,6 @@ div.tooltip {
 
 }
 
-li{
-  /* display: none; */
-}
-
 
 .filter-container{
   margin-top: 50px;
@@ -115,8 +111,13 @@ li{
 }
 
 .found {
-  fill: #ff4136;
   stroke: #ff4136;
+}
+
+.link {
+  fill: none;
+  stroke: rgb(7, 235, 19);
+  stroke-width: 2px;
 }
 
 .dropdown-container{
