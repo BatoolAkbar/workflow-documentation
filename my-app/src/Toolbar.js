@@ -70,18 +70,8 @@ function Toolbar(props) {
       <div>
         <div className="toolbar">
           <div className="filter-container">
-            <div className="search">
-              <input type="text" id="search" placeholder="Search for tables.." />
-              <button id="submit">submit</button>
-              <div id="test">
-                {/* {console.log(search_data)}
-                {search_data.map(d => (
-                  <li key={d.id} id="span">
-                    <a>{d.db_name}</a>
-                  </li>
-                ))} */}
-
-              </div>
+            <div className="search-container">
+              <input type="text" id="search" placeholder="Search for tables.." /><button id="submit">Search</button>
             </div>
             <button className="save-btn" onClick={handleClick}>
               DOWNLOAD
