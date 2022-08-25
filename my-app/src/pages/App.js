@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'
-import Frame from './Frame'
-import './style.css';
+import Header from '../components/Header'
+import Frame from '../components/Frame'
+import '../style/style.css';
 
 function App() {
   return (

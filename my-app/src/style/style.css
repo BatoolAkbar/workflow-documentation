@@ -110,14 +110,14 @@ div.tooltip {
 
 }
 
-.found {
+/* .found {
   stroke: #ff4136;
-}
+} */
 
 .link {
   fill: none;
-  stroke: rgb(7, 235, 19);
-  stroke-width: 2px;
+  stroke: rgb(200, 200, 200);
+  stroke-width: 0.5px;
 }
 
 .dropdown-container{
@@ -149,13 +149,18 @@ select:focus {
   border: none;
   color: white;
   border: 0.5px solid white;
-  border-radius: 20px;
+  border-radius: 20px 0px 0px 20px;
   background-color: transparent;
   margin-top: 12px;
 }
 
 #search:focus{
   outline: none;
+}
+
+.search-container{
+  display: flex;
+  width: 95%;
 }
 
 input[type="search"]::-webkit-search-decoration,
@@ -231,6 +236,18 @@ input[type="search"]::-webkit-search-results-decoration {
   position: absolute;
 
 }
+#submit{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  width: 20%;
+  padding: 5px 5px 5px 5px;
+  border: none;
+  color: white;
+  border: 0.5px solid rgb(255, 255, 255);
+  border-radius: 0px 20px 20px 0px;
+  background-color: rgba(255, 255, 255, 0.1);;
+  margin-top: 12px;
+}
 
 .checkbox{
   margin-top: 20px;
@@ -266,7 +283,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
   flex-direction: column;
   border-bottom: 0.5px solid rgb(77, 77, 77);
-  margin-top: 5%;
+  /* margin-top: 5%; */
   padding-bottom: 25px;
 }
 

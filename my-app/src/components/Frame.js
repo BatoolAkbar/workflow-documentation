@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
-import Chart from './Chart'
-import Tree from './Tree'
-import Tree2 from './Tree2'
+import Chart from './charts/Chart'
+import Tree from './charts/Tree'
 import Toolbar from './Toolbar'
-import './style.css';
+import '../style/style.css';
 
 
 
 function Frame() {
-  const json = require('./data/nested_no_lookback.json');
+  const json = require('../data/nested_no_lookback.json');
   const data = json.children
   const [currentData, updateData] = useState(data)
-  const [view, setView] = useState("tree");
+  const [view, setView] = useState("layout");
 
   if (view == "layout") {
     return (
@@ -43,7 +42,6 @@ function Frame() {
             </div>
           </Col>
           <Col lg={8}>
-          {/* <Tree2 view={"tree"} wrapped={json} /> */}
             <Tree view={"tree"} wrapped={json} />
           </Col>
         </Row>

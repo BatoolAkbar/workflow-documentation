@@ -1,14 +1,12 @@
 import React from 'react';
 import Legend from './Legend'
-import Search from './Search'
-import * as d3 from "d3";
-import './style.css';
+import '../style/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Toolbar(props) {
   const saveSvgAsPng = require('save-svg-as-png')
-  const search_data = require('./data/search_data.json');
+  const search_data = require('../data/search_data.json');
 
 
   search_data.forEach((d, i) => {
@@ -70,18 +68,8 @@ function Toolbar(props) {
       <div>
         <div className="toolbar">
           <div className="filter-container">
-            <div className="search">
-              <input type="text" id="search" placeholder="Search for tables.." />
-              <button id="submit">submit</button>
-              <div id="test">
-                {/* {console.log(search_data)}
-                {search_data.map(d => (
-                  <li key={d.id} id="span">
-                    <a>{d.db_name}</a>
-                  </li>
-                ))} */}
-
-              </div>
+            <div className="search-container">
+              <input type="text" id="search" placeholder="Search for tables.." /><button id="submit">Search</button>
             </div>
             <button className="save-btn" onClick={handleClick}>
               DOWNLOAD

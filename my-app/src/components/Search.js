@@ -1,5 +1,5 @@
 function Search(props) {
-    const json = require('./data/nested_no_lookback.json');
+    const json = require('../data/nested_no_lookback.json');
     const myData = props.data.data
 
     // function myFunction() {
