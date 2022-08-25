@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
-import { useD3 } from './hooks/useD3';
+import { useD3 } from '../../hooks/useD3';
 import * as d3 from "d3";
-import './style.css';
-
-
+import '../../style/style.css';
 
 function Tree(props) {
-    const search_data = require('./data/search_data.json');
+    const search_data = require('../../data/search_data.json');
     const [paths, setPaths] = useState()
-
 
     search_data.forEach((d, i) => {
         d.id = i;
@@ -16,21 +13,24 @@ function Tree(props) {
         if (d.depth && d.data.length !== 7) d.children = null;
     });
 
-
     // code from Mike Bostock example of Collapsible Tree: https://observablehq.com/@d3/collapsible-tree
     const ref = useD3(
         () => {
             const width = window.innerWidth;
-            const height = window.innerHeight;
+            const margin = ({ top: 10, right: 120, bottom: 10, left: 400 })
             const diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x)
             // dx is the distance between lines (line height)
             const dx = 70
             // dy is the distance between columns
             const dy = width / 3
-            const margin = ({ top: 10, right: 120, bottom: 10, left: 400 })
             // d3.tree() d3 built in function creates a new tree layout
             const tree = d3.tree().nodeSize([dx, dy])
             const data = props.wrapped
+
+            // nodes: is an array of objects (nodes), each node contains an array of children (nodes)
+            // root: root is an object contains all nodes and children and formatted in a tree data structure 
+            // treePath & paths: an array of search results
+
 
             // nodes colors
             var src_clr = "#ff08e6"
@@ -40,20 +40,21 @@ function Tree(props) {
             var view_clr = "#eda6ff"
             var table_clr = "white"
 
-            //removing a section from the other chart's toolbar because we're in tree view
-            d3.select(".node-container")
-                .remove()
             // tree layout expects a hierarchical data structure. d3.hierarchy() does that
             const root = d3.hierarchy(data);
-
             root.x0 = dy / 6;
             root.y0 = 0;
+
             // descendants() is a d3 built in function used to generate and return an array of descendant nodes
             root.descendants().forEach((d, i) => {
                 d.id = i;
                 d._children = d.children;
                 if (d.depth && d.data.length !== 7) d.children = null;
             });
+
+            //removing a section from the other chart's toolbar because we're in tree view
+            d3.select(".node-container")
+                .remove()
 
             // code from https://bl.ocks.org/jjzieve/a743242f46321491a950
             // function returns the path to the searched node (object)
@@ -82,7 +83,6 @@ function Tree(props) {
 
             // function opens/expands the path of the searched node (object)
             function openPaths(paths) {
-                console.log(paths, "PATH")
                 for (var i = 0; i < paths.length; i++) {
                     if (paths[i].id !== "1") {//i.e. not root
                         paths[i].class = 'found';
@@ -104,11 +104,6 @@ function Tree(props) {
 
             // defining a group to hold all the links (lines that connect the nodes)
             const gLink = svg.append("g");
-
-            // .attr("fill", "none")
-            // .attr("stroke", "grey")
-            // .attr("stroke-opacity", 0.5)
-            // .attr("stroke-width", 0.5);
 
             // defining a group to hold all the nodes
             const gNode = svg.append("g")
@@ -149,22 +144,14 @@ function Tree(props) {
                     .attr("transform", function (d) { return "translate(" + treePath.y0 + "," + treePath.x0 + ")"; })
                     .attr("fill-opacity", 0)
                     .attr("stroke-opacity", 0)
-                    // ((node) => {
-                    //     console.log("test")
-                    //     node.children = node.children ? null : node._children;
-                    //     update(node);
-                    // })();
                     .on("click", (event, node) => {
                         node.children = node.children ? null : node._children;
                         update(node);
-
                     });
 
 
                 // nodes colors
                 function colorScale(d) {
-    
-        
                     if (d.data.source) {
                         return src_clr
                     } if (d.data.source_name) {
@@ -209,30 +196,6 @@ function Tree(props) {
                     .attr("fill-opacity", 0)
                     .attr("stroke-opacity", 0);
 
-
-                // var nodeUpdate = node.transition()
-                //     .duration(duration)
-                //     .attr("transform", function (d) { return "translate(" + d.y + "," + d.x + ")"; });
-
-                //     nodeUpdate.select("circle")
-                //     .style("fill", function (d) {
-                //         if (d.class === "found") {
-                //             return "#ff4136"; //red
-                //         }
-                //         else if (d._children) {
-                //             return "lightsteelblue";
-                //         }
-                //         else {
-                //             return "#fff";
-                //         }
-                //     })
-                //     .style("stroke", function (d) {
-                //         if (d.class === "found") {
-                //             return "#ff4136"; //red
-                //         }
-                //     });
-
-
                 // Update the links…
                 const link = gLink.selectAll("path")
                     .data(links, d => d.target.id);
@@ -250,12 +213,12 @@ function Tree(props) {
                     .attr("d", diagonal)
                     .style("stroke", function (d) {
                         if (d.target.class === "found") {
-                            return "#black";
+                            return "#929292";
                         }
                     })
                     .style("stroke-width", function (d) {
                         if (d.target.class === "found") {
-                            return "2px";
+                            return "1px";
                         }
                     });
 
@@ -286,37 +249,34 @@ function Tree(props) {
             }
             // search function
             function search(e) {
-                var input, inputValue, searched_value;
-                input = document.getElementById('search');
-                inputValue = input.value.toUpperCase();
-                var results = [];
-                var data_arr = []
+                var search_input, inputValue, searched_value;
+                search_input = document.getElementById('search');
+                inputValue = search_input.value.toUpperCase();
+                var searched_results = [];
+                var flat_data_arr = []
 
                 function removeDuplicates(arr) {
                     return [...new Set(arr)];
                 }
 
-                search_data.map(d => data_arr.push(d.db_name, d.source, d.source_name, d.report_name, d.main_view, d.table_1, d.table_2))
-                const dataArr = removeDuplicates(data_arr)
-                for (let i = 0; i < dataArr.length; i++) {
+                search_data.map(d => flat_data_arr.push(d.db_name, d.source, d.source_name, d.report_name, d.main_view, d.table_1, d.table_2))
+                removeDuplicates(flat_data_arr)
+
+                for (let i = 0; i < flat_data_arr.length; i++) {
                     searched_value = e.target.value
-                    results = dataArr.filter(str => str.toUpperCase().includes(inputValue))
+                    searched_results = flat_data_arr.filter(str => str.toUpperCase().includes(inputValue))
                 }
 
-
-
-                var paths = searchTree(root, results[0], []);
+                var paths = searchTree(root, searched_results[0], []);
                 if (typeof (paths) !== "undefined") {
                     openPaths(paths);
                 }
                 else {
-                    console.log(results[0], " not found!");
+                    console.log(searched_results[0], " not found!");
                 }
             }
             d3.select("#submit")
                 .on("click", search)
-
-
         }, []
     )
     return (

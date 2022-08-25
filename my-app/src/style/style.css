@@ -116,7 +116,7 @@ div.tooltip {
 
 .link {
   fill: none;
-  stroke: rgb(160, 160, 160);
+  stroke: rgb(200, 200, 200);
   stroke-width: 0.5px;
 }
 
@@ -283,7 +283,7 @@ input[type="search"]::-webkit-search-results-decoration {
   width: 100%;
   flex-direction: column;
   border-bottom: 0.5px solid rgb(77, 77, 77);
-  margin-top: 5%;
+  /* margin-top: 5%; */
   padding-bottom: 25px;
 }
 

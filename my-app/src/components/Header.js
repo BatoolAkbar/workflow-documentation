@@ -1,11 +1,11 @@
 import React from 'react';
-import './style.css';
+import '../style/style.css';
 
 
 function Header() {
   return (
    <div className="title">
-     API & Workflow Map
+     Database Modeling & Visualization
    </div>
   );
 }

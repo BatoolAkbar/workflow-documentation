@@ -1,14 +1,12 @@
 import React from 'react';
 import Legend from './Legend'
-import Search from './Search'
-import * as d3 from "d3";
-import './style.css';
+import '../style/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function Toolbar(props) {
   const saveSvgAsPng = require('save-svg-as-png')
-  const search_data = require('./data/search_data.json');
+  const search_data = require('../data/search_data.json');
 
 
   search_data.forEach((d, i) => {
