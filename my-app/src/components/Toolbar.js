@@ -3,11 +3,9 @@ import Legend from './Legend'
 import '../style/style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 function Toolbar(props) {
   const saveSvgAsPng = require('save-svg-as-png')
   const search_data = require('../data/search_data.json');
-
 
   search_data.forEach((d, i) => {
     d.id = i;
@@ -25,13 +23,11 @@ function Toolbar(props) {
     left: -window.innerWidth / 6,
   }
 
-
   const handleClick = () => {
     saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), 'api-tree.png', imageOptions);
   };
 
   const myData = props.data
-
 
   if (props.view == "layout") {
     return (
@@ -61,9 +57,7 @@ function Toolbar(props) {
         </div>
       </div>
     );
-
   } else if (props.view == "tree") {
-
     return (
       <div>
         <div className="toolbar">
@@ -80,8 +74,5 @@ function Toolbar(props) {
       </div>
     );
   }
-
-
 }
-
 export default Toolbar;
