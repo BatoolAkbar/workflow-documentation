@@ -23,8 +23,15 @@ function Toolbar(props) {
     left: -window.innerWidth / 6,
   }
 
+  const date = new Date();
+  var day = date.getDate();
+  const monthNames = ["jan", "feb", "mar", "apr", "may", "jun",
+    "jul", "aug", "sep", "oct", "nov", "dec"
+  ];
+  const monthName = monthNames[date.getMonth()]
+
   const handleClick = () => {
-    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), 'api-tree.png', imageOptions);
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), `db-tree-${monthName}-${day}th.png`, imageOptions);
   };
 
   const myData = props.data
