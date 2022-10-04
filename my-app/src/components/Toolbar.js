@@ -31,7 +31,7 @@ function Toolbar(props) {
   const monthName = monthNames[date.getMonth()]
 
   const handleClick = () => {
-    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), `db-tree-${monthName}-${day}th.png`, imageOptions);
+    saveSvgAsPng.saveSvgAsPng(document.getElementById('tree'), `db-tree-${monthName}-${day}.png`, imageOptions);
   };
 
   const myData = props.data
