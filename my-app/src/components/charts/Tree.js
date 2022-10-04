@@ -3,6 +3,15 @@ import { useD3 } from '../../hooks/useD3';
 import * as d3 from "d3";
 import '../../style/style.css';
 
+// todo refactor
+    // update gabby w/ status
+        // first finish asana - brief/tech scope/cards
+    // cleanup app structure
+    // rename all variables
+    // extract functions into independent components
+        // start with search()
+    // convert WET code to DRY
+    
 function Tree(props) {
     const search_data = require('../../data/search_data.json');
     const [paths, setPaths] = useState()
