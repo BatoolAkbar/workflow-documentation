@@ -1,30 +1,29 @@
 import React from 'react';
 import '../style/style.css';
 
+function Legend(props) {
+    const legend_keys = Object.keys(props.data[0])
+    legend_keys.splice(4, 9,'main_view', 'table_1')
 
-function Legend() {
-  return (
-    <div id="legend">
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"#ff08e6"}}></div><span>Source</span>
-    </div>
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"#00ffff"}}></div><span>Source Name</span>
-    </div>
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"#d9ff00"}}></div><span>Database</span>
-    </div>
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"#8f5cff"}}></div><span>Report Name</span>
-    </div>
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"#eda6ff"}}></div><span>Main View</span>
-    </div>
-    <div className="key-container">
-        <div className="legend-keys" style={{backgroundColor:"white"}}></div><span>Table</span>
-    </div>
-</div>
-  );
+    function formatKeys(str) {
+        const capitalized = str.charAt(0).toUpperCase() + str.slice(1);
+        return capitalized.split("_").join(' ');
+    }
+
+    function generateLegend() {
+        return legend_keys.map(function (key) {
+            return (
+            <div className="key-container">
+                <div id={`${key}-color`} className="legend-keys"></div><span>{formatKeys(key)}</span>
+            </div>)
+        });
+    }
+
+    return (
+        <div id="legend">
+            {generateLegend()}
+        </div>
+    )
 }
 
 export default Legend;

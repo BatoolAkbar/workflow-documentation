@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Raleway:wght@400;600;700&display=swap');
+:root {
+  --source: #ff08e6;
+  --source-name: #00ffff;
+  --db-name: #d9ff00;
+  --report-name: #8f5cff;
+  --main-view: #eda6ff;
+  --table-1: white;
+}
 
 
 body {
@@ -314,20 +322,39 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .node-key-source{
-  background-color: #ff08e6;
+  background-color: var(--source);
 }
 .node-key-source-name{
-  background-color: #00ffff;
+  background-color: var(--source-name);
 }
 .node-key-db{
-  background-color: #d9ff00;
+  background-color: var(--db-name);
 }
 .node-key-report{
-  background-color: #8f5cff;
+  background-color: var(--report-name);
 }
 .node-key-mv{
-  background-color:#eda6ff;
+  background-color:var(--main-view);
 }
 .node-key-table{
-  background-color:white;
+  background-color:var(--table-1);
+}
+
+#source-color{
+  background-color: var(--source);
+}
+#source_name-color{
+  background-color: var(--source-name);
+}
+#db_name-color{
+  background-color: var(--db-name);
+}
+#report_name-color{
+  background-color: var(--report-name);
+}
+#main_view-color{
+  background-color: var(--main-view);
+}
+#table_1-color{
+  background-color:var(--table-1);
 }
