@@ -60,7 +60,7 @@ function Toolbar(props) {
               <span>Labels</span>
             </div>
           </div>
-          <Legend />
+          <Legend data={search_data} />
         </div>
       </div>
     );
@@ -76,7 +76,7 @@ function Toolbar(props) {
               DOWNLOAD
             </button>
           </div>
-          <Legend />
+          <Legend data={search_data} />
         </div>
       </div>
     );

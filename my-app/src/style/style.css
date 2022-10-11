@@ -1,4 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Raleway:wght@400;600;700&display=swap');
+:root {
+  --api: #b0b0b0;
+  --source: #ff08e6;
+  --source-name: #00ffff;
+  --db-name: #d9ff00;
+  --report-name: #8f5cff;
+  --main-view: #eda6ff;
+  --table-1: white;
+  --table-2: white;
+  --table-3: white;
+}
 
 
 body {
@@ -34,14 +45,14 @@ div.tooltip {
   margin-left: 5%;
   border: 0.5px solid black;
   border-radius: 0px 10px 10px 0px;
-  width: 58vw;
+  width: 75vw;
   height: 80vh;
   font-size: 110px;
 } 
 #viz{
   border: 0.5px solid black;
   border-radius: 0px 10px 10px 0px;
-  width: 58vw;
+  width: 75vw;
   height: 80vh;
 }
 .tree{
@@ -313,21 +324,70 @@ input[type="search"]::-webkit-search-results-decoration {
   height: 10px;
 }
 
-.node-key-source{
-  background-color: #ff08e6;
+#node-key-source{
+  background-color: var(--source);
 }
-.node-key-source-name{
-  background-color: #00ffff;
+#node-key-source_name{
+  background-color: var(--source-name);
 }
-.node-key-db{
-  background-color: #d9ff00;
+#node-key-db_name{
+  background-color: var(--db-name);
 }
-.node-key-report{
-  background-color: #8f5cff;
+#node-key-report_name{
+  background-color: var(--report-name);
 }
-.node-key-mv{
-  background-color:#eda6ff;
+#node-key-main_view{
+  background-color:var(--main-view);
 }
-.node-key-table{
-  background-color:white;
+#node-key-table_1{
+  background-color:var(--table-1);
 }
+
+#source-color{
+  background-color: var(--source);
+}
+#source_name-color{
+  background-color: var(--source-name);
+}
+#db_name-color{
+  background-color: var(--db-name);
+}
+#report_name-color{
+  background-color: var(--report-name);
+}
+#main_view-color{
+  background-color: var(--main-view);
+}
+#table_1-color{
+  background-color:var(--table-1);
+}
+
+.name-color{
+  fill: var(--api);
+}
+.source-color{
+  fill: var(--source);
+}
+.source_name-color{
+  fill: var(--source-name);
+}
+.db_name-color{
+  fill: var(--db-name);
+}
+.report_name-color{
+  fill: var(--report-name);
+}
+.main_view-color{
+  fill: var(--main-view);
+}
+.table_1-color{
+  fill:var(--table-1);
+}
+.table_2-color{
+  fill:var(--table-2);
+}
+.table_3-color{
+  fill:var(--table-3);
+}
+
+

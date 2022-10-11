@@ -2,10 +2,9 @@ import React, { useState } from 'react';
 import { useD3 } from '../../hooks/useD3';
 import * as d3 from "d3";
 import '../../style/style.css';
-
+    
 function Tree(props) {
     const search_data = require('../../data/search_data.json');
-    const [paths, setPaths] = useState()
 
     search_data.forEach((d, i) => {
         d.id = i;
@@ -14,7 +13,7 @@ function Tree(props) {
     });
 
     // code from Mike Bostock example of Collapsible Tree: https://observablehq.com/@d3/collapsible-tree
-    const ref = useD3(
+    useD3(
         () => {
             const width = window.innerWidth;
             const margin = ({ top: 10, right: 120, bottom: 10, left: 400 })
@@ -31,14 +30,6 @@ function Tree(props) {
             // root: root is an object contains all nodes and children and formatted in a tree data structure 
             // treePath & paths: an array of search results
 
-
-            // nodes colors
-            var src_clr = "#ff08e6"
-            var src_name_clr = "#00ffff"
-            var db_clr = "#d9ff00"
-            var report_clr = "#8f5cff"
-            var view_clr = "#eda6ff"
-            var table_clr = "white"
 
             // tree layout expects a hierarchical data structure. d3.hierarchy() does that
             const root = d3.hierarchy(data);
@@ -152,25 +143,14 @@ function Tree(props) {
 
                 // nodes colors
                 function colorScale(d) {
-                    if (d.data.source) {
-                        return src_clr
-                    } if (d.data.source_name) {
-                        return src_name_clr
-                    } if (d.data.db_name) {
-                        return db_clr
-                    } if (d.data.report_name) {
-                        return report_clr
-                    } if (d.data.main_view) {
-                        return view_clr
-                    } else {
-                        return table_clr
-                    }
+                    const node_key = Object.keys(d.data)[0]
+                    return `${node_key}-color`
                 }
 
                 // drawing circles
                 nodeEnter.append("circle")
                     .attr("r", 8)
-                    .attr("fill", d => colorScale(d))
+                    .attr("class", d => colorScale(d))
                     .attr("stroke-width", 10);
 
                 // labels

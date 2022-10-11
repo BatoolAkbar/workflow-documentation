@@ -2,25 +2,21 @@ import React from 'react';
 import { useD3 } from '../../hooks/useD3';
 import * as d3 from "d3";
 import '../../style/style.css';
+import { path } from 'd3';
+let helper = require('./helpers');
+
 
 function Chart(props) {
-    const ref = useD3(
+
+    useD3(
         () => {
             const width = window.innerWidth;
             const height = window.innerHeight;
             const data = props.data
 
-            var src_clr = "#ff08e6"
-            var src_name_clr = "#00ffff"
-            var db_clr = "#d9ff00"
-            var report_clr = "#8f5cff"
-            var view_clr = "#eda6ff"
-            var table_clr = "white"
-
             drawViz(data[4]);
 
             function drawViz(branch) {
-
                 const root = d3.hierarchy(branch);
                 const links = root.links();
                 const nodes = root.descendants();
@@ -57,8 +53,8 @@ function Chart(props) {
                     .force("y", d3.forceY());
 
                 const svg = d3.select("#viz")
-                    .attr("viewBox", [-width / 3.5, -height / 2, width /2, height]);
-                    svg.selectAll("*").remove()
+                    .attr("viewBox", [-width / 3.5, -height / 2, width / 2, height]);
+                svg.selectAll("*").remove()
 
                 const link = svg.append("g")
                     .attr("stroke", "black")
@@ -73,101 +69,64 @@ function Chart(props) {
                     .style("opacity", 0);
 
                 function colorScale(d) {
-                    // return "transparent"
-                    if (d.data.source) {
-                        return src_clr
-                    } if (d.data.source_name) {
-                        return src_name_clr
-                    } if (d.data.db_name) {
-                        return db_clr
-                    } if (d.data.report_name) {
-                        return report_clr
-                    } if (d.data.main_view) {
-                        return view_clr
-                    } else {
-                        return table_clr
-                    }
+                    const node_key = Object.keys(d.data)[0]
+                    return `${node_key}-color`
                 }
 
                 function circleSize(d) {
-                    if (d.data.source) {
-                        return 20
-                    } if (d.data.source_name) {
-                        return 14
-                    } if (d.data.db_name) {
-                        return 12
-                    } if (d.data.report_name) {
-                        return 10
-                    } if (d.data.lookback) {
-                        return 8
-                    } if (d.data.lookback == '0') {
-                        return 8
-                    } if (d.data.main_view) {
-                        return 6
-                    } else {
-                        return 4
+                    const node_key = Object.keys(d.data)[0]
+                    let keys = ['source', 'source_name', 'db_name', 'report_name', 'lookback', 'main_view', 'table_1', 'table_2', 'table_3']
+                    let radius = []
+                    for (let i = 0; i < keys.length; i++) {
+                        radius.push(i * 2 + 2)
                     }
+
+                    let myScale = d3.scaleOrdinal()
+                        .domain(keys)
+                        .range(radius.reverse());
+                    return myScale(node_key)
                 }
 
                 function nodesLabels(d) {
-                    if (d.data.source) {
-                        return d.data.source
-                    }
-                    if (d.data.source_name) {
-                        return d.data.source_name
-                    }
-                    if (d.data.report_name) {
-                        return d.data.report_name
-                    }
-                    if (d.data.db_name) {
-                        return d.data.db_name
-                    }
-                    
+                    const node_val = Object.values(d.data)[0]
+                    return node_val
                 }
-
 
                 function tooltip(d) {
                     if (d.data.report_name) {
-                        return d.data.name  + "<br>" + "Lookback: " + d.data.lookback + " days"
+                        return d.data.name + "<br>" + "Lookback: " + d.data.lookback + " days"
                     }
                     else {
                         return d.data.name
                     }
                 }
 
-
-
                 function nodePathText(d) {
-                    if (d.data.source) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name} </div>`
-                    }
-                    if (d.data.source_name) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"><div class="node-key node-key-source"></div> ${d.data.name}</div>` + `<div class="node-text"><div class="node-key node-key-source-name"></div>${d.parent.data.name} </div>`
-                    }
-                    if (d.data.db_name) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name}</div>` + `<div class="node-text"> <div class="node-key node-key-source-name"></div> ${d.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-db"></div> ${d.parent.parent.data.name} </div>`
-                    }
-                    if (d.data.report_name) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name}</div>` + `<div class="node-text"> <div class="node-key node-key-source-name"></div> ${d.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-db"></div> ${d.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-report"></div> ${d.parent.parent.parent.data.name} </div>`
-                    }
-                    if (d.data.main_view) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name}</div>` + `<div class="node-text"> <div class="node-key node-key-source-name"></div> ${d.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-db"></div> ${d.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-report"></div> ${d.parent.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-mv"></div> ${d.parent.parent.parent.parent.data.name} </div>`
-                    }
-                    if (d.data.table_1) {
-                        return `<span class="node-path-title">Selected Node Path:</span><div class="node-text"> <div class="node-key node-key-source"></div> ${d.data.name}</div>` + `<div class="node-text"> <div class="node-key node-key-source-name"></div> ${d.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-db"></div> ${d.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-report"></div> ${d.parent.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-mv"></div> ${d.parent.parent.parent.parent.data.name} </div>` + `<div class="node-text"> <div class="node-key node-key-table"></div> ${d.parent.parent.parent.parent.parent.data.name} </div>`
-                    }
+                    let keys = Object.keys(d.data)[0]
+                    let nodePathTitle = `<span class="node-path-title">Selected Node Path:</span>`
+                    let nodePath = `${nodePathTitle}`
+                    let pathContainer = `<div class="node-text"> <div class="node-key" id="node-key-${keys}"></div>`
+                    let parents = d.ancestors()
+                    let parent_nodes = []
+                    parents.forEach(e => {
+                        parent_nodes.push(Object.values(e)[0].name)
+                    })
+                    let pathName = parent_nodes.forEach(e => {
+                        nodePath += `${pathContainer}${e}</div>`
+                    })
+                    nodePath += `${pathName}`
+                    return nodePath
                 }
-
 
                 const dots = svg.append("g")
                     .selectAll("circle")
                     .data(nodes)
                     .join("circle")
                     .attr("stroke", "black")
-                    .attr("fill", d => colorScale(d))
+                    .attr("class", d => colorScale(d))
                     .attr("r", d => circleSize(d))
                     .call(drag(simulation))
-                    .on("click", (event, d) => { 
+                    .on("click", (event, d) => {
                         generateNodePath(d);
                     });
 
@@ -203,15 +162,11 @@ function Chart(props) {
                     .attr("class", "node-container")
                     .style("opacity", 0);
 
-
-
-
                 function generateNodePath(d) {
                     nodePath
                         .style("opacity", 1)
                         .html(nodePathText(d))
                 }
-
 
                 svg.call(d3.zoom()
                     .extent([[0, 0], [width, height]])
@@ -282,5 +237,4 @@ function Chart(props) {
         </div>
     );
 }
-
 export default Chart;
