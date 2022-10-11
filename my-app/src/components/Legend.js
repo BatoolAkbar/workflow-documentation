@@ -13,8 +13,8 @@ function Legend(props) {
     function generateLegend() {
         return legend_keys.map(function (key) {
             return (
-            <div className="key-container">
-                <div id={`${key}-color`} className="legend-keys"></div><span>{formatKeys(key)}</span>
+            <div key={`${key}`} className="key-container">
+                <div  id={`${key}-color`} className="legend-keys"></div><span>{formatKeys(key)}</span>
             </div>)
         });
     }
